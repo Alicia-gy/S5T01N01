@@ -19,7 +19,6 @@ public class SucursalDTO {
     }
 
 
-    // Getters y Setters
     public int getPk_SucursalID() {
         return pk_SucursalID;
     }

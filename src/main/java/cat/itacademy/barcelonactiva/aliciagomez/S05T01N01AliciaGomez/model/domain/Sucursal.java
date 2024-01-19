@@ -32,24 +32,27 @@ public class Sucursal {
     }
 
 
-    public int getId() {
+    public int getPk_SucursalID() {
         return pk_SucursalID;
     }
 
-    public String getNom() {
+    public void setPk_SucursalID(int pk_SucursalID) {
+        this.pk_SucursalID = pk_SucursalID;
+    }
+
+    public String getNomSucursal() {
         return nomSucursal;
     }
 
-    public void setNom(String nomSucursal) {
+    public void setNomSucursal(String nomSucursal) {
         this.nomSucursal = nomSucursal;
     }
 
-    public String getPais() {
+    public String getPaisSucursal() {
         return paisSucursal;
     }
 
-    public void setPais(String paisSucursal) {
+    public void setPaisSucursal(String paisSucursal) {
         this.paisSucursal = paisSucursal;
     }
-
 }

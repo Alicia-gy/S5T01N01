@@ -14,10 +14,10 @@
     <hr>
     <h2>Update Sucursal</h2>
 
-    <form action="#" th:action="@{/saveSucursal}" th:object="${sucursal}" method="POST">
+    <form action="#" th:action="@{/sucursal/add}" th:object="${sucursal}" method="POST">
 
         <!-- Add hidden form field to handle update -->
-        <input type="hidden" th:field="*{id}" />
+        <input type="hidden" th:field="*{pk_SucursalID}" />
 
         <input type="text" th:field="*{nomSucursal}" class="form-control mb-4 col-4">
 
@@ -28,7 +28,7 @@
 
     <hr>
 
-    <a th:href="@{/}"> Back to Sucursal List</a>
+    <a th:href="@{sucursal/}"> Back to Sucursal List</a>
 </div>
 </body>
 

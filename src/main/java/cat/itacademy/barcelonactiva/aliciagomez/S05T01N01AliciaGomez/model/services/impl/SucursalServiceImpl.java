@@ -50,7 +50,9 @@ public class SucursalServiceImpl implements SucursalService {
     @Transactional(readOnly = true)
     public List<SucursalDTO> findAll() {
         List<Sucursal> sucursals = sucursalRepository.findAll();
-        return sucursals.stream().map(flor -> modelMapper.map(sucursals, SucursalDTO.class)).collect(Collectors.toList());
+        List<SucursalDTO> dtos =
+                sucursals.stream().map(sucursal -> modelMapper.map(sucursal, SucursalDTO.class)).collect(Collectors.toList());
+        return dtos;
     }
 
 }

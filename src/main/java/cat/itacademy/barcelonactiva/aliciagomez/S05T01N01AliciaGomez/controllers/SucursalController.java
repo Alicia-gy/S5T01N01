@@ -57,17 +57,17 @@ public class SucursalController {
     }
 
     //update
-    @PutMapping("/update/{id}")
+    @GetMapping("/showFormForUpdate/{id}")
     public String update(@PathVariable(value = "id") int id, Model model) {
         SucursalDTO dto = sucursalService.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
 
-        model.addAttribute("user", dto);
-        return "update-user";
+        model.addAttribute("sucursal", dto);
+        return "update-sucursal";
     }
 
     //delete
-    @DeleteMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     public String delete(@PathVariable(value = "id") int id){
 
         sucursalService.deleteById(id);
